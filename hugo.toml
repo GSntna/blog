@@ -1,0 +1,113 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+# Automatically generate robots.txt
+enableRobotsTXT = true
+theme = "gokarna"
+title = "Gustavo Santana"
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    # Display name
+    name = "Posts"
+
+    # Relative URL slug (appended to baseURL)
+    url = "/posts/"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 2
+  
+  # [[menu.main]]
+  #   name = "Pojects"
+  #   url = "/pojects/"
+  #   weight = 3
+
+  [[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 4
+
+  # [[menu.main]]
+  #   name = "Tags"
+  #   url = "/tags/"
+  #   weight = 5
+    
+  [[menu.main]]
+    name = "Resume"
+    url = "pdf/Gustavo_Santana.pdf"
+    weight = 6
+    [menu.main.params]
+      newPage = true
+    
+  [[menu.main]]
+    # Unique identifiers are required for menu entries without a name property,
+    # or for menu entries which re-use a name
+    identifier = "github"
+
+    # Absolute URL to external resource
+    url = "https://github.com/GSntna"
+    weight = 7
+    
+    # Surround the menu entry (or name) with HTML content, such as Feather
+    # icons: https://feathericons.com
+    pre = "<span data-feather='github'></span>"
+    post = ""
+    [menu.main.params]
+      newPage = true
+
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
+
+[params]
+  # Choose the color shown when hyperlinks are hovered over
+  accentColor = "#00a8e8"
+
+  # Footer text (i.e. author/project name)
+  footer = "Gustavo Santana"
+
+  fontSize = "20px"
+  
+  # Profile picture
+  avatarURL = "/images/avatar.webp"
+  avatarSize = "size-s"
+  
+  # Text under the profile picture
+  description = "Data Scientist · BI Engineer · Tech Enthusiast"
+
+  # Define SEO keywords
+  metaKeywords = ["blog", "gustavo santana", "data science", "data engineer",
+    "business intelligence", "data analysis", "data"]
+
+  # Posts in homepage display
+  showPostsOnHomePage = "recent"  # chage to "popular" to use weight
+  numberPostsOnHomePage = 4
+
+  # Show next/previous buttons in the posts
+  togglePreviousAndNextButtons = false
+
+  # Show estimated reading time if true
+  displayReadingTime = true
+
+  # Display a "back to top" button on posts and pages: true, false
+  # May not render on smaller screen sizes
+  showBackToTopButton = true
+
+  # Homepage icons
+    socialIcons = [
+        {name = "linkedin", url = "https://www.linkedin.com/in/g-santana-velazquez/"},
+        {name = "gmail", url = "mailto:gsntnav@gmail.com"},
+        {name = "github", url = "https://github.com/GSntna"},
+    ]
+
+# To handle web crawlers and requests overload
+enableRobotsTXT = true

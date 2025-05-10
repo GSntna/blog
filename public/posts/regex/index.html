@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #00a8e8;
+            --font-size: 20px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Regular expressions (regex)</title>
+    <meta name="description" content="Introduction Regular expressions are a powerful tool used for searching, matching and manipulating strings based on patterns. To use it the following steps can …">
+    <meta name="keywords" content='blog, gustavo santana, data science, data engineer, business intelligence, data analysis, data, python, regex, notes'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/regex/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Regular expressions (regex)">
+    <meta property="og:description" content="Introduction Regular expressions are a powerful tool used for searching, matching and manipulating strings based on patterns. To use it the following steps can …">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.webp">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regular expressions (regex)">
+    <meta name="twitter:description" content="Introduction Regular expressions are a powerful tool used for searching, matching and manipulating strings based on patterns. To use it the following steps can …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/regex/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/regex/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.webp">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/regex/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.a036ebe92c17ea3f0c07761c2135b82bec6f37c8efb7f49ddad1f28c22fc4769.js" integrity="sha256-oDbr6SwX6j8MB3YcITW4K&#43;xvN8jvt/Sd2tHyjCL8R2k="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.webp' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Gustavo Santana</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/" aria-label="" > Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/categories/" aria-label="" > Categories </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pdf/Gustavo_Santana.pdf" aria-label="" target="_blank"> Resume </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/GSntna" aria-label="github" target="_blank"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/" > Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/categories/" > Categories </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pdf/Gustavo_Santana.pdf" target="_blank"> Resume </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/GSntna" target="_blank"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Regular expressions (regex)</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">
+              
+                  6 min read |
+              
+
+              May 10, 2025
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/python">python</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/regex">regex</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/notes">notes</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="introduction">Introduction</h2>
+<p>Regular expressions are a powerful tool used for searching, matching and
+manipulating strings based on patterns. To use it the following steps can be
+followed:</p>
+<ol>
+<li>Import the <strong>regex</strong> module with <code>import re</code>.</li>
+<li>Create a <em>Regex object</em> with the <code>re.compile()</code> function.
+(Remember to use a raw string.)</li>
+<li>Pass the string to search into the Regex object’s <code>search()</code> method.
+This returns a <em>Match object</em>.</li>
+<li>Call the Match object’s <code>group()</code> method to return the first found string of
+the actual matched text.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> phone_regex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>)  <span style="color:#75715e"># check for a phone number</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo <span style="color:#f92672">=</span> phone_regex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My number is 312-156-8940.&#39;</span>)  <span style="color:#75715e"># get match objects</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(mo<span style="color:#f92672">.</span>group())  <span style="color:#75715e"># print match objects</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;312-156-8940&#39;</span>
+</span></span></code></pre></div><h2 id="pattern-matching-capabilities">Pattern matching capabilities</h2>
+<h3 id="grouping-with-parenthesis">Grouping with parenthesis</h3>
+<p>Adding parenthesis to the regular expression will create <em>groups</em>. The different
+groups can be returned with the <code>group()</code>method, specifying the group number
+(1-indexed) to return.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> phone_regex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">)-(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)&#39;</span>)  <span style="color:#75715e"># added parenthesis</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo <span style="color:#f92672">=</span> phone_regex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My number is 312-156-8940.&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;312&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;156-8940&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group()  <span style="color:#75715e"># returns all as a string</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;312-156-8940&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>groups()  <span style="color:#75715e"># returns tuple</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;312&#39;</span>, <span style="color:#e6db74">&#39;156-8940&#39;</span>)
+</span></span></code></pre></div><h3 id="other-functionalities">Other functionalities</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Regex</th>
+          <th>Returns</th>
+          <th style="text-align: left">Functionality</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>r'Batman|Robin'</code></td>
+          <td><code>There's Batman and Robin</code> -&gt; <code>Batman</code></td>
+          <td style="text-align: left">Looks for either of the given substrings</td>
+      </tr>
+      <tr>
+          <td><code>r'Bat(man|mobile|copter)'</code></td>
+          <td><code>Batmobile lost a wheel</code> -&gt; <code>Batmobile</code></td>
+          <td style="text-align: left">The first string + any of the substrings in parenthesis</td>
+      </tr>
+      <tr>
+          <td><code>r'Bat(wo)?man'</code></td>
+          <td><code>Batman and Batwoman</code> -&gt; <code>Batman</code></td>
+          <td style="text-align: left">The substring before <code>?</code> can be zero or once</td>
+      </tr>
+      <tr>
+          <td><code>r'Bat(wo)*man'</code></td>
+          <td><code>Batwowoman and Batwoman</code> -&gt; <code>Batwowoman</code></td>
+          <td style="text-align: left">The substring before <code>*</code> can be zero or more times</td>
+      </tr>
+      <tr>
+          <td><code>r'Bat(wo)+man'</code></td>
+          <td><code>Batman and Batwoman</code> -&gt; <code>batwoman</code></td>
+          <td style="text-align: left">The substring before <code>+</code> has to be once or more</td>
+      </tr>
+      <tr>
+          <td><code>r'(ha){3}'</code></td>
+          <td><code>hahahaha</code> -&gt; <code>hahaha</code></td>
+          <td style="text-align: left">Match the pattern <code>{n}</code> times</td>
+      </tr>
+      <tr>
+          <td><code>r'(ha){2,4}'</code></td>
+          <td><code>hahahahaha</code> -&gt; <code>hahahaha</code></td>
+          <td style="text-align: left">Match pattern within range <code>{n,m}</code>, always takes higher range by default (greedy)</td>
+      </tr>
+      <tr>
+          <td><code>r'(ha){2,4}?'</code></td>
+          <td><code>hahahahaha</code> -&gt; <code>haha</code></td>
+          <td style="text-align: left">Match pattern within range <code>{n,m}</code>, takes lower range (non-greedy)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="search-vs-findall">search() vs findall()</h3>
+<p>While <code>search()</code> will return a <em>match object</em> of the <em>first</em> matched text in the
+search string, the <code>findall()</code> method will return a <em>list</em> of every match in the
+string. If there are groups in the regex, <code>findall()</code> will return a list of
+tuples.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> phoneNumRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo <span style="color:#f92672">=</span> phoneNumRegex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Cell: 415-555-9999 Work: 212-555-0000&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group()
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;415-555-9999&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> phoneNumRegex<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;Cell: 415-555-9999 Work: 212-555-0000&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;415-555-9999&#39;</span>, <span style="color:#e6db74">&#39;212-555-0000&#39;</span>]
+</span></span></code></pre></div><h2 id="character-classes">Character Classes</h2>
+<h3 id="shorthand-codes-for-common-character-classes">Shorthand codes for common character classes</h3>
+<p><a href="https://pythex.org/">cheatsheet</a></p>
+<table>
+  <thead>
+      <tr>
+          <th>Shorthand character class</th>
+          <th>Represents</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>\d</code></td>
+          <td>Any numeric digit from 0-9</td>
+      </tr>
+      <tr>
+          <td><code>\D</code></td>
+          <td>Any character that is <em>not</em> a numeric digit</td>
+      </tr>
+      <tr>
+          <td><code>\w</code></td>
+          <td>Any letter, numeric digit, or the underscore character. (like matching “word” characters)</td>
+      </tr>
+      <tr>
+          <td><code>\W</code></td>
+          <td>Any character that is not a letter, numeric digit, or the underscore character</td>
+      </tr>
+      <tr>
+          <td><code>\s</code></td>
+          <td>Any space, tab, or newline character (&ldquo;space&rdquo; characters)</td>
+      </tr>
+      <tr>
+          <td><code>\S</code></td>
+          <td>Any character that is not a space, tab, or newline</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="creating-own-character-classes">Creating own character classes</h3>
+<p>To create character classes, the characters or character ranges can be specified
+inside square brackets, for example:</p>
+<ul>
+<li><code>r'[aeiouAEIOU]'</code> for vowels</li>
+<li><code>r'[a-zA-Z]'</code> for lower case and upper case letters</li>
+<li><code>r'[0-5.]'</code> for characters from 0 to 5 and period.</li>
+</ul>
+<p>A negative character class can also be created, i.e. a class to exclude the
+speficied characters. To do this, the <em>caret character</em> (<code>^</code>)  is used at the
+beginning of the class. For example:</p>
+<ul>
+<li><code>r'[^aeiouAEIOU]'</code> for any character that is not a vowel</li>
+</ul>
+<h4 id="the-caret-and-dollar-signs">The caret and dollar signs</h4>
+<p>The caret <code>^</code> is also used to indicate that the match must occur at the
+<em>beginning</em> of the searched text. Likewise, the dollar sign <code>$</code> character
+indicates that the string <em>must end</em> with the regex pattern.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># starts with</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> begginsw <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^Hello&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> begginsw<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Hello world&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>re<span style="color:#f92672">.</span>Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>), <span style="color:#66d9ef">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ends with</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> endsWithNumber <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d$&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> endsWithNumber<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Your number is 42&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>re<span style="color:#f92672">.</span>Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>), <span style="color:#66d9ef">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># begins and ends with</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> wholeStringIsNum <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^\d+$&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> wholeStringIsNum<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;1234567890&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>re<span style="color:#f92672">.</span>Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>), <span style="color:#66d9ef">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1234567890&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> wholeStringIsNum<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;12345xyz67890&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><h4 id="wildcard-character">Wildcard character</h4>
+<ul>
+<li>The dot <code>.</code> is a <em>wildcard</em> and will match anything except for a new line.</li>
+<li><code>.*</code> will match everything and anything except for a new line. Use case below.</li>
+<li>To match also the new line character, pass <code>re.DOTALL</code> as a second argument in
+<code>re.compile()</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># match everything and anything</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> nameRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;First Name: (.*) Last Name: (.*)&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo <span style="color:#f92672">=</span> nameRegex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;First Name: Al Last Name: Sweigart&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Sweigart&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># include new line</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> newlineRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;.*&#39;</span>, re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> newlineRegex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Serve the public trust.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Protect the innocent.&#39;</span>)<span style="color:#f92672">.</span>group()
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Serve the public trust.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Protect the innocent.&#39;</span>
+</span></span></code></pre></div><h4 id="case-insensitive-matching">Case insensitive matching</h4>
+<p>To ignore casing pass the <code>re.IGNORECASE</code> or <code>re.I</code> as a second argument to
+<code>re.compile()</code></p>
+<h3 id="substituting-strings">Substituting strings</h3>
+<p>The <code>sub()</code> method for a <em>regex object</em> can be used to replace text patterns by
+another one. It takes as arguments the string to replace any matches and the
+string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># using another word</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> namesRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Agent \w+&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> namesRegex<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;CENSORED&#39;</span>, <span style="color:#e6db74">&#39;Agent Alice gave the secret documents to Agent Bob.&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;CENSORED gave the secret documents to CENSORED.&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># using the same word to replace</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> agentNamesRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Agent (\w)\w*&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> agentNamesRegex<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\1****&#39;</span>, <span style="color:#e6db74">&#39;Agent Alice told Agent Carol that Agent</span>
+</span></span><span style="display:flex;"><span>Eve knew Agent Bob was a double agent<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;)</span>
+</span></span><span style="display:flex;"><span>A<span style="color:#f92672">****</span> told C<span style="color:#f92672">****</span> that E<span style="color:#f92672">****</span> knew B<span style="color:#f92672">****</span> was a double agent<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;</span>
+</span></span></code></pre></div><h3 id="multi-line-regex">Multi-line regex</h3>
+<p>To improve readability and break complex regex into separate lines, the
+<code>re.VERBOSE</code> argument can be passed to <code>re.compile()</code>. This would allow a regex
+as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>phoneRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">|\(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">\))?            # area code
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\s|-|\.)?                    # separator
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">                         # first 3 digits
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\s|-|\.)                     # separator
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">                         # last 4 digits
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\s*(ext|x|ext.)\s*\d{2,5})?  # extension
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    )&#39;&#39;&#39;</span>, re<span style="color:#f92672">.</span>VERBOSE)
+</span></span></code></pre></div><h3 id="combining-reignorecase-redotall-and-reverbose">Combining re.IGNORECASE, re.DOTALL, and re.VERBOSE</h3>
+<p><code>re.compile()</code> only takes two arguments, so in order to use multiple
+functionalities in the same object the pipe <code>|</code> character can be used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> someRegexValue <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;foo&#39;</span>, re<span style="color:#f92672">.</span>IGNORECASE <span style="color:#f92672">|</span> re<span style="color:#f92672">.</span>DOTALL)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> someRegexValue <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;foo&#39;</span>, re<span style="color:#f92672">.</span>IGNORECASE <span style="color:#f92672">|</span> re<span style="color:#f92672">.</span>DOTALL <span style="color:#f92672">|</span> re<span style="color:#f92672">.</span>VERBOSE)
+</span></span></code></pre></div><h2 id="cheat-sheet">Cheat Sheet</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: right">Regex</th>
+          <th>Functionality</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right"><code>?</code></td>
+          <td>matches zero or one of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>*</code></td>
+          <td>matches zero or more of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>+</code></td>
+          <td>matches one or more of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>{n}</code></td>
+          <td>matches exactly n of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>{n,}</code></td>
+          <td>matches n or more of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>{,m}</code></td>
+          <td>matches 0 to m of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>{n,m}</code></td>
+          <td>matches at least n and at most m of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>{n,m}?</code>, <code>*?</code>, <code>+?</code></td>
+          <td>performs a non-greedy match of the preceding group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>^spam</code></td>
+          <td>means the string must begin with spam.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>spam$</code></td>
+          <td>means the string must end with spam.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>.</code></td>
+          <td>matches any character, except newline characters.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>\d</code>, <code>\w</code>, <code>\s</code></td>
+          <td>match a digit, word, or space character, respectively.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>\D</code>, <code>\W</code>, <code>\S</code></td>
+          <td>match anything except a digit, word, or space character, respectively.</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>[abc]</code></td>
+          <td>matches any character between the brackets (such as a, b, or c).</td>
+      </tr>
+      <tr>
+          <td style="text-align: right"><code>[^abc]</code></td>
+          <td>matches any character that isn’t between the brackets.</td>
+      </tr>
+  </tbody>
+</table>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#pattern-matching-capabilities">Pattern matching capabilities</a>
+          <ul>
+            <li><a href="#grouping-with-parenthesis">Grouping with parenthesis</a></li>
+            <li><a href="#other-functionalities">Other functionalities</a></li>
+            <li><a href="#search-vs-findall">search() vs findall()</a></li>
+          </ul>
+        </li>
+        <li><a href="#character-classes">Character Classes</a>
+          <ul>
+            <li><a href="#shorthand-codes-for-common-character-classes">Shorthand codes for common character classes</a></li>
+            <li><a href="#creating-own-character-classes">Creating own character classes</a></li>
+            <li><a href="#substituting-strings">Substituting strings</a></li>
+            <li><a href="#multi-line-regex">Multi-line regex</a></li>
+            <li><a href="#combining-reignorecase-redotall-and-reverbose">Combining re.IGNORECASE, re.DOTALL, and re.VERBOSE</a></li>
+          </ul>
+        </li>
+        <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+        
+            
+        
+
+        
+
+        
+        
+
+        
+
+    
+
+    
+        <span>&copy; 2025 Gustavo Santana</span>
+    
+
+    <span>
+        Powered by <a href="https://gohugo.io/">Hugo</a> and
+        <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

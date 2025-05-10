@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debugging on Gustavo Santana</title>
+    <link>http://localhost:1313/tags/debugging/</link>
+    <description>Recent content in Debugging on Gustavo Santana</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debugging</title>
+      <link>http://localhost:1313/posts/debug/</link>
+      <pubDate>Sat, 10 May 2025 19:24:47 +0200</pubDate>
+      <guid>http://localhost:1313/posts/debug/</guid>
+      <description>&lt;h2 id=&#34;assertions&#34;&gt;Assertions&lt;/h2&gt;&#xA;&lt;p&gt;It is a sanity check to make sure the code is not doing something obviously&#xA;wrong. These are done with &lt;code&gt;assert&lt;/code&gt; statements. If the sanity check fails,&#xA;then an &lt;code&gt;assertError&lt;/code&gt; exception is raised.&lt;/p&gt;&#xA;&lt;h2 id=&#34;logging&#34;&gt;Logging&lt;/h2&gt;&#xA;&lt;p&gt;Logging is used to debug the code. It can print information, warnings, debugging&#xA;and errors while the script is running.&lt;/p&gt;&#xA;&lt;h3 id=&#34;using-the-logging-module&#34;&gt;Using the logging module&lt;/h3&gt;&#xA;&lt;p&gt;To set the logging messages the following syntax is used:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; logging&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;logging&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;basicConfig(&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    filename&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;my_log.txt&amp;#39;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;logging&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DEBUG,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    format&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%(asctime)s&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; -  &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%(levelname)s&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; -  &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%(message)s&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;basicConfig&lt;/code&gt; parameters do the following:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

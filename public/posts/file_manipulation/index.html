@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #00a8e8;
+            --font-size: 20px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Reading, writing and organizing files</title>
+    <meta name="description" content="Navigating through system Path library The Path module from the pathlib library allows to manipulate file paths and navigate through the system. These are some …">
+    <meta name="keywords" content='blog, gustavo santana, data science, data engineer, business intelligence, data analysis, data, python, pathlib, os, notes'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/file_manipulation/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reading, writing and organizing files">
+    <meta property="og:description" content="Navigating through system Path library The Path module from the pathlib library allows to manipulate file paths and navigate through the system. These are some …">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.webp">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reading, writing and organizing files">
+    <meta name="twitter:description" content="Navigating through system Path library The Path module from the pathlib library allows to manipulate file paths and navigate through the system. These are some …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/file_manipulation/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/file_manipulation/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.webp">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/file_manipulation/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.a036ebe92c17ea3f0c07761c2135b82bec6f37c8efb7f49ddad1f28c22fc4769.js" integrity="sha256-oDbr6SwX6j8MB3YcITW4K&#43;xvN8jvt/Sd2tHyjCL8R2k="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.webp' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Gustavo Santana</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/" aria-label="" > Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/categories/" aria-label="" > Categories </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pdf/Gustavo_Santana.pdf" aria-label="" target="_blank"> Resume </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/GSntna" aria-label="github" target="_blank"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/" > Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/categories/" > Categories </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pdf/Gustavo_Santana.pdf" target="_blank"> Resume </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/GSntna" target="_blank"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Reading, writing and organizing files</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">
+              
+                  5 min read |
+              
+
+              May 10, 2025
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/python">python</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/pathlib">pathlib</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/os">os</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/notes">notes</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="navigating-through-system">Navigating through system</h2>
+<h3 id="path-library">Path library</h3>
+<p>The <code>Path</code> module from the <code>pathlib</code> library allows to manipulate file paths and
+navigate through the system. These are some functions in the <code>Path</code> module:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path(<span style="color:#e6db74">&#39;folder&#39;</span>, <span style="color:#e6db74">&#39;subfolder&#39;</span>, <span style="color:#e6db74">&#39;file.txt&#39;</span>)  <span style="color:#75715e"># returns path (adapted to os)</span>
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;folder/subfolder/file.txt&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path<span style="color:#f92672">.</span>home()                              <span style="color:#75715e"># returns home directory</span>
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home/user&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path<span style="color:#f92672">.</span>cwd()                               <span style="color:#75715e"># get current working directory</span>
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home/user/current/working/directory&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Getting ancestor folder of a path</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path<span style="color:#f92672">.</span>cwd()<span style="color:#f92672">.</span>parents[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home/user/current/working&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path<span style="color:#f92672">.</span>cwd()<span style="color:#f92672">.</span>parents[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home/user/current/&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> Path<span style="color:#f92672">.</span>cwd()<span style="color:#f92672">.</span>parents[<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># get the attributes of a path</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#39;/home/user/current/file.txt&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>anchor
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>parent
+</span></span><span style="display:flex;"><span>PosixPath(<span style="color:#e6db74">&#39;/home/user/current/file.txt&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>name
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;file.txt&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>stem
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;file&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>suffix
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;.txt&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>drive  <span style="color:#75715e"># what&#39;s before the anchor (&#39;C:&#39; in Windows)</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>exists() <span style="color:#75715e"># check if file/dir exists</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>is_dir() <span style="color:#75715e"># check if it is a directory</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> p<span style="color:#f92672">.</span>is_file() <span style="color:#75715e"># check if it is a file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><h3 id="os-library">os library</h3>
+<p>Another library used for navigation and manipulation of files and directories is
+<code>os</code>. This library is older than <code>pathlib</code>, so it can do most of the things that
+<code>pathlib</code> does. Here are some useful functions not covered by the latter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>makedirs(<span style="color:#e6db74">&#39;/home/user/new/folder/paths&#39;</span>)  <span style="color:#75715e"># create one or multiple folders</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(<span style="color:#e6db74">&#39;.&#39;</span>)  <span style="color:#75715e"># returns the absolute path</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isabs(<span style="color:#e6db74">&#39;.&#39;</span>)  <span style="color:#75715e"># boolean if path is absolute</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>sep  <span style="color:#75715e"># gets the separator for the OS</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/&#39;</span>  <span style="color:#75715e"># &#39;\\&#39; for Windows</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getsize(<span style="color:#e6db74">&#39;./path&#39;</span>) <span style="color:#75715e"># returns path&#39;s size</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">23453</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>listdir(<span style="color:#e6db74">&#39;./path&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;list&#39;</span>, <span style="color:#e6db74">&#39;with&#39;</span>, <span style="color:#e6db74">&#39;files.xlsx&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> list(Path<span style="color:#f92672">.</span>cwd()<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#39;*.txt&#39;</span>))  <span style="color:#75715e"># get list of txt files in cwd</span>
+</span></span><span style="display:flex;"><span>[PosixPath(<span style="color:#e6db74">&#39;./file.txt&#39;</span>)], PosixPath(<span style="color:#e6db74">&#39;./file2.txt&#39;</span>)
+</span></span></code></pre></div><h3 id="navigation-functions-summary">Navigation functions summary</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Path.home()</code></td>
+          <td>returns home directory</td>
+      </tr>
+      <tr>
+          <td><code>Path.cwd()</code></td>
+          <td>returns current working directory</td>
+      </tr>
+      <tr>
+          <td><code>p.parents[n]</code></td>
+          <td>p being a path object, parents[n] return n up parent folders path</td>
+      </tr>
+      <tr>
+          <td><code>p.anchor</code></td>
+          <td>returns path anchor</td>
+      </tr>
+      <tr>
+          <td><code>p.parent</code></td>
+          <td>returns Path object with p path</td>
+      </tr>
+      <tr>
+          <td><code>p.name</code></td>
+          <td>returns file name with extension</td>
+      </tr>
+      <tr>
+          <td><code>p.stem</code></td>
+          <td>returns file name without extension</td>
+      </tr>
+      <tr>
+          <td><code>p.suffix</code></td>
+          <td>returns file extension</td>
+      </tr>
+      <tr>
+          <td><code>p.drive</code></td>
+          <td>returns what&rsquo;s before the anchor &ldquo;C:&rdquo; for Windows</td>
+      </tr>
+      <tr>
+          <td><code>list(p.glob('*.txt'))</code></td>
+          <td>returns all the documents that match the pattern (regex-like) in that directory</td>
+      </tr>
+      <tr>
+          <td><code>p.exists()</code></td>
+          <td>boolean to check if p exists</td>
+      </tr>
+      <tr>
+          <td><code>p.is_file()</code></td>
+          <td>boolean to check if p is a file</td>
+      </tr>
+      <tr>
+          <td><code>p.is_dir()</code></td>
+          <td>boolean to check if p is a directory</td>
+      </tr>
+      <tr>
+          <td><code>os.makedirs(path)</code></td>
+          <td>creates one or more folders</td>
+      </tr>
+      <tr>
+          <td><code>os.pah.abspath('.')</code></td>
+          <td>returns absolute path of the argument</td>
+      </tr>
+      <tr>
+          <td><code>os.path.isabs('.')</code></td>
+          <td>boolean, returns if path is absolute</td>
+      </tr>
+      <tr>
+          <td><code>os.sep</code></td>
+          <td>returns the operating system separator</td>
+      </tr>
+      <tr>
+          <td><code>os.path.getsize(path)</code></td>
+          <td>returns path&rsquo;s size in bytes</td>
+      </tr>
+      <tr>
+          <td><code>os.listdir(path)</code></td>
+          <td>returns list with files and folders in path</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="readingwriting-process">Reading/Writing process</h2>
+<p>The more common way of writing or reading a file is using the <code>open(file, mode)</code>
+function and file objects. The steps to follow are:</p>
+<ol>
+<li>Call the <code>open()</code> function to return a <code>File</code> object.</li>
+<li>Call the <code>read()</code> or <code>write()</code> method on the <code>File</code> object.</li>
+<li>Close the file by calling the <code>close()</code> method on the <code>File</code> object.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;some_file.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#75715e"># read, r is default</span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">.</span>read() <span style="color:#75715e"># returns string with text</span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">.</span>readlines() <span style="color:#75715e"># returns list of strings, where each element is a line</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;some_file.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#75715e"># write</span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;write this text to a file.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;some_file.txt&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>) <span style="color:#75715e"># append</span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;this text will be appended to the file&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">.</span>close() <span style="color:#75715e"># closes the file</span>
+</span></span></code></pre></div><h2 id="organizing-files">Organizing files</h2>
+<h3 id="shell-utilities-shutil">Shell utilities (shutil)</h3>
+<p>The built-in module <code>shutil</code>has functions to copy, move, rename and delete
+files.</p>
+<h4 id="copy-move-and-rename">Copy, move and rename</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> shutil<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> shutil<span style="color:#f92672">.</span>copy(<span style="color:#e6db74">&#39;./test.txt&#39;</span>, <span style="color:#e6db74">&#39;./src/&#39;</span>) <span style="color:#75715e"># copy to src folder</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;./src/test.txt&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> shutil<span style="color:#f92672">.</span>copy(<span style="color:#e6db74">&#39;./test.txt&#39;</span>, <span style="color:#e6db74">&#39;./src/test2.txt&#39;</span>) <span style="color:#75715e"># copy with different name</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;./src/test2.txt&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Move and rename</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> shutil<span style="color:#f92672">.</span>move(<span style="color:#e6db74">&#39;./test.txt&#39;</span>, <span style="color:#e6db74">&#39;./src/&#39;</span>) <span style="color:#75715e"># move to src folder</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;./src/test.txt&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> shutil<span style="color:#f92672">.</span>move(<span style="color:#e6db74">&#39;./test.txt&#39;</span>, <span style="color:#e6db74">&#39;./src/test2.txt&#39;</span>) <span style="color:#75715e"># move and rename</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;./src/test2.txt&#39;</span>
+</span></span></code></pre></div><h5 id="safely-removing-files-with-send2trash">Safely removing files with send2trash</h5>
+<p>To send a file/folder to trash instead of permanently removing it, the third
+party library <code>send2trash</code> can be used.</p>
+<p>Syntax: <code>send2trash.send2trash('filename.txt')</code></p>
+<h3 id="walking-a-directory-tree">Walking a directory tree</h3>
+<p>To iterate over all the folder and files inside a folder the <code>os.walk(path)</code>
+function can be used. It returns three values on each iteration of the loop:</p>
+<ul>
+<li>a string of the curent folder&rsquo;s name,</li>
+<li>a list of strings of folders in the current folder,</li>
+<li>a list of strings of files in the current folder</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> folderName, subfolders, filenames <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>walk(<span style="color:#e6db74">&#39;pathto/foldertowalk/&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The current folder is &#39;</span> <span style="color:#f92672">+</span> folderName)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> subfolder <span style="color:#f92672">in</span> subfolders:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;SUBFOLDER OF &#39;</span> <span style="color:#f92672">+</span> folderName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;: &#39;</span> <span style="color:#f92672">+</span> subfolder)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> filenames:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;FILE INSIDE &#39;</span> <span style="color:#f92672">+</span> folderName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;: &#39;</span><span style="color:#f92672">+</span> filename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;&#39;</span>)
+</span></span></code></pre></div><h3 id="compressing-files">Compressing files</h3>
+<h4 id="reading-zip-files">Reading ZIP files</h4>
+<p>To read a zip file and explore its contents:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> zipfile<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip <span style="color:#f92672">=</span> zipfile<span style="color:#f92672">.</span>ZipFile(<span style="color:#e6db74">&#39;./src.zip&#39;</span>)  <span style="color:#75715e"># create object for compressed file</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip<span style="color:#f92672">.</span>namelist()  <span style="color:#75715e"># get contents</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;src/&#39;</span>, <span style="color:#e6db74">&#39;src/SUMMARY.md&#39;</span>, <span style="color:#e6db74">&#39;src/homepage.md&#39;</span>, <span style="color:#e6db74">&#39;src/regex.md&#39;</span>, <span style="color:#e6db74">&#39;src/read_write.md&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> file <span style="color:#f92672">=</span> zip<span style="color:#f92672">.</span>getinfo(<span style="color:#e6db74">&#39;src/regex.md&#39;</span>)  <span style="color:#75715e"># select a file to get info</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> file<span style="color:#f92672">.</span>file_size  <span style="color:#75715e"># file size</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">9078</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> file<span style="color:#f92672">.</span>compress_size  <span style="color:#75715e"># compressed file size</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3173</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip<span style="color:#f92672">.</span>close()  <span style="color:#75715e"># close zip file</span>
+</span></span></code></pre></div><h4 id="extracting-from-zip-files">Extracting from zip files</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip <span style="color:#f92672">=</span> zipfile<span style="color:#f92672">.</span>ZipFile(<span style="color:#e6db74">&#39;./src.zip&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip<span style="color:#f92672">.</span>extractall()  <span style="color:#75715e"># extract all files in zip to cwd</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip<span style="color:#f92672">.</span>extract(<span style="color:#e6db74">&#39;src/regex.md&#39;</span>, <span style="color:#e6db74">&#39;./some/folder&#39;</span>)  <span style="color:#75715e"># extract only given file to given path</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> zip<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h4 id="creating-a-zip-file">Creating a zip file</h4>
+<p>Works similar to the <code>read()</code> method. The zip file has to be opened using
+<code>zip = zipfile.ZipFile(zipfile)</code> but specifying a second argument: <code>w</code> or <code>a</code> for
+writting and appending respectively.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> newZip <span style="color:#f92672">=</span> zipfile<span style="color:#f92672">.</span>ZipFile(<span style="color:#e6db74">&#39;new.zip&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)  <span style="color:#75715e"># write mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> newZip<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;spam.txt&#39;</span>, compress_type<span style="color:#f92672">=</span>zipfile<span style="color:#f92672">.</span>ZIP_DEFLATED)  <span style="color:#75715e"># compress spam.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> newZip<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h3 id="organizing-functions-summary">Organizing functions summary</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>shutil.copy(source, destination)</code></td>
+          <td>copy file at <em>source</em> to <em>destination</em> folder</td>
+      </tr>
+      <tr>
+          <td><code>shutil.copytree(source, destination)</code></td>
+          <td>copy folder along with subfolders/files to <em>destination</em></td>
+      </tr>
+      <tr>
+          <td><code>shutil.move(source, destination)</code></td>
+          <td>move file at <em>source</em> to <em>destination</em> folder</td>
+      </tr>
+      <tr>
+          <td><code>os.unlink(path)</code></td>
+          <td>delete file at <em>path</em></td>
+      </tr>
+      <tr>
+          <td><code>os.rmdir(path)</code></td>
+          <td>delete folder at <em>path</em>, it has to be empty</td>
+      </tr>
+      <tr>
+          <td><code>os.rmtree(path)</code></td>
+          <td>delete folder at <em>path</em> along with all its files and subfolders</td>
+      </tr>
+      <tr>
+          <td><code>send2trash.send2trash(file)</code></td>
+          <td>send a file to trash instead of permanent deletion</td>
+      </tr>
+      <tr>
+          <td><code>os.walk(path)</code></td>
+          <td>iterate over all files under <em>path</em></td>
+      </tr>
+      <tr>
+          <td><code>zip = zipfile.ZipFile(zipfile)</code></td>
+          <td>read zip file</td>
+      </tr>
+      <tr>
+          <td><code>zip.namelist()</code></td>
+          <td>get contents from zipfile</td>
+      </tr>
+      <tr>
+          <td><code>zip.extractall(path)</code></td>
+          <td>extract files from zip to <em>path</em>, defaults to cwd</td>
+      </tr>
+      <tr>
+          <td><code>zip.extract(file, path)</code></td>
+          <td>extract only selected file from zip to given path; if path isn&rsquo;t given it defaults to cwd</td>
+      </tr>
+      <tr>
+          <td><code>newzip = zipfile.ZipFile(newzip, w)</code></td>
+          <td>open zip file in write mode</td>
+      </tr>
+      <tr>
+          <td><code>newzip.write(file, compress_type)</code></td>
+          <td>writes a file into a zip file, the compress_type defines the compression algorithm</td>
+      </tr>
+  </tbody>
+</table>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#navigating-through-system">Navigating through system</a>
+          <ul>
+            <li><a href="#path-library">Path library</a></li>
+            <li><a href="#os-library">os library</a></li>
+            <li><a href="#navigation-functions-summary">Navigation functions summary</a></li>
+          </ul>
+        </li>
+        <li><a href="#readingwriting-process">Reading/Writing process</a></li>
+        <li><a href="#organizing-files">Organizing files</a>
+          <ul>
+            <li><a href="#shell-utilities-shutil">Shell utilities (shutil)</a></li>
+            <li><a href="#walking-a-directory-tree">Walking a directory tree</a></li>
+            <li><a href="#compressing-files">Compressing files</a></li>
+            <li><a href="#organizing-functions-summary">Organizing functions summary</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+        
+            
+        
+
+        
+
+        
+        
+
+        
+
+    
+
+    
+        <span>&copy; 2025 Gustavo Santana</span>
+    
+
+    <span>
+        Powered by <a href="https://gohugo.io/">Hugo</a> and
+        <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
