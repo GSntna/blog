@@ -111,7 +111,3 @@ title = "Gustavo Santana"
 
 # To handle web crawlers and requests overload
 enableRobotsTXT = true
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
