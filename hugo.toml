@@ -78,7 +78,7 @@ title = "Gustavo Santana"
   fontSize = "20px"
   
   # Profile picture
-  avatarURL = "/images/avatar.webp"
+  avatarURL = "./images/avatar.webp"
   avatarSize = "size-s"
   
   # Text under the profile picture
@@ -111,3 +111,7 @@ title = "Gustavo Santana"
 
 # To handle web crawlers and requests overload
 enableRobotsTXT = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
