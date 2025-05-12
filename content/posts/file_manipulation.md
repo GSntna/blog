@@ -3,11 +3,10 @@ date: 2025-05-10T19:14:59+02:00
 # description: ""
 # image: ""
 lastmod: 2025-05-10
-showTableOfContents: false
+showTableOfContents: true
 tags: ["python", "pathlib", "os", "notes"]
 title: "Reading, writing and organizing files"
 type: "post"
-showTableOfContents: true
 ---
 
 ## Navigating through system

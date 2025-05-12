@@ -3,11 +3,10 @@ date: 2025-05-09T14:34:24+02:00
 description: "This is a test description"
 image: "./static/images/perrito.jpg"
 lastmod: 2025-05-09
-showTableOfContents: false
+showTableOfContents: true
 tags: ["markdown", "idea", "start", "first post", "testing"]
 title: "Lorem Ipsum"
 type: "post"
-showTableOfContents: true
 ---
 
 ## Header 2.1

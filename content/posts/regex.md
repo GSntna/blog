@@ -3,11 +3,10 @@ date: 2025-05-10T19:04:01+02:00
 # description: ""
 # image: ""
 lastmod: 2025-05-10
-showTableOfContents: false
+showTableOfContents: true
 tags: ["python", "regex", "notes"]
 title: "Regular expressions (regex)"
 type: "post"
-showTableOfContents: true
 ---
 
 ## Introduction

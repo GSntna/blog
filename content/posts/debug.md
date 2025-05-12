@@ -3,11 +3,10 @@ date: 2025-05-10T19:24:47+02:00
 # description: ""
 # image: ""
 lastmod: 2025-05-10
-showTableOfContents: false
+showTableOfContents: true
 tags: ["python", "logging", "debugging", "notes"]
 title: "Debugging"
 type: "post"
-showTableOfContents: true
 ---
 
 ## Assertions
