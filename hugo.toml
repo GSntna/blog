@@ -93,7 +93,7 @@ title = "Gustavo Santana"
   numberPostsOnHomePage = 4
 
   # Show next/previous buttons in the posts
-  togglePreviousAndNextButtons = false
+  togglePreviousAndNextButtons = true
 
   # Show estimated reading time if true
   displayReadingTime = true
