@@ -62,24 +62,6 @@
     <loc>https://example.org/posts/regex/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/first-post/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/idea/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/first_post/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/markdown/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/start/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/testing/</loc>
-    <lastmod>2025-05-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://example.org/categories/</loc>
   </url>
 </urlset>

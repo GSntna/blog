@@ -92,40 +92,5 @@
       <guid>https://example.org/tags/regex/</guid>
       <description></description>
     </item>
-    <item>
-      <title>First Post</title>
-      <link>https://example.org/tags/first-post/</link>
-      <pubDate>Fri, 09 May 2025 14:34:24 +0200</pubDate>
-      <guid>https://example.org/tags/first-post/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Idea</title>
-      <link>https://example.org/tags/idea/</link>
-      <pubDate>Fri, 09 May 2025 14:34:24 +0200</pubDate>
-      <guid>https://example.org/tags/idea/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>https://example.org/tags/markdown/</link>
-      <pubDate>Fri, 09 May 2025 14:34:24 +0200</pubDate>
-      <guid>https://example.org/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Start</title>
-      <link>https://example.org/tags/start/</link>
-      <pubDate>Fri, 09 May 2025 14:34:24 +0200</pubDate>
-      <guid>https://example.org/tags/start/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Testing</title>
-      <link>https://example.org/tags/testing/</link>
-      <pubDate>Fri, 09 May 2025 14:34:24 +0200</pubDate>
-      <guid>https://example.org/tags/testing/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
