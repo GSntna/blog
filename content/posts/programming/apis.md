@@ -7,6 +7,7 @@ showTableOfContents: true
 tags: ["http", "web", "api", "notes"]
 title: "API Basics"
 type: "post"
+weight: 2
 ---
 
 ## Introduction

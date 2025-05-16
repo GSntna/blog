@@ -7,6 +7,7 @@ showTableOfContents: true
 tags: ["python", "regex", "notes"]
 title: "Regular expressions (regex)"
 type: "post"
+weight: 3
 ---
 
 ## Introduction

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/posts/programming/web_scrapping/</loc>
+    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/programming/apis/</loc>
+    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/programming/regex/</loc>
+    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://example.org/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -38,13 +47,7 @@
     <loc>https://example.org/tags/web/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/programming/web_scrapping/</loc>
-    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/api/</loc>
-    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/programming/apis/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/http/</loc>
@@ -69,9 +72,6 @@
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/regex/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/programming/regex/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.org/categories/</loc>

@@ -89,7 +89,7 @@ title = "Gustavo Santana"
     "business intelligence", "data analysis", "data"]
 
   # Posts in homepage display
-  showPostsOnHomePage = "recent"  # chage to "popular" to use weight
+  showPostsOnHomePage = "popular"  # "popular" or "recent"
   numberPostsOnHomePage = 4
 
   # Show next/previous buttons in the posts
@@ -108,6 +108,18 @@ title = "Gustavo Santana"
         {name = "gmail", url = "mailto:gsntnav@gmail.com"},
         {name = "github", url = "https://github.com/GSntna"},
     ]
+
+  customHeadHTML = '''
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z17E0QP0VK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z17E0QP0VK');
+    </script>
+'''
 
 # To handle web crawlers and requests overload
 enableRobotsTXT = true

@@ -7,6 +7,7 @@ showTableOfContents: true
 tags: ["python", "web", "bs4", "selenium", "notes"]
 title: "Web Scrapping"
 type: "post"
+weight: 1
 ---
 
 ## Introduction
