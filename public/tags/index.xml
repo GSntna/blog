@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Gustavo Santana</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Books</title>
+      <link>https://example.org/tags/books/</link>
+      <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
+      <guid>https://example.org/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Habits</title>
+      <link>https://example.org/tags/habits/</link>
+      <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
+      <guid>https://example.org/tags/habits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Development</title>
+      <link>https://example.org/tags/self-development/</link>
+      <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
+      <guid>https://example.org/tags/self-development/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bs4</title>
       <link>https://example.org/tags/bs4/</link>
