@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/programming/web_scrapping/</loc>
+    <loc>https://gustats.com/posts/programming/web_scrapping/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/programming/apis/</loc>
+    <loc>https://gustats.com/posts/programming/apis/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/programming/regex/</loc>
+    <loc>https://gustats.com/posts/programming/regex/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://gustats.com/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/books/atomic_habits/</loc>
+    <loc>https://gustats.com/posts/books/atomic_habits/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/books/</loc>
+    <loc>https://gustats.com/tags/books/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/habits/</loc>
+    <loc>https://gustats.com/tags/habits/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://gustats.com/posts/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/self-development/</loc>
+    <loc>https://gustats.com/tags/self-development/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://gustats.com/tags/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/bs4/</loc>
+    <loc>https://gustats.com/tags/bs4/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/notes/</loc>
+    <loc>https://gustats.com/tags/notes/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/python/</loc>
+    <loc>https://gustats.com/tags/python/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/selenium/</loc>
+    <loc>https://gustats.com/tags/selenium/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/web/</loc>
+    <loc>https://gustats.com/tags/web/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/api/</loc>
+    <loc>https://gustats.com/tags/api/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/http/</loc>
+    <loc>https://gustats.com/tags/http/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/programming/debug/</loc>
+    <loc>https://gustats.com/posts/programming/debug/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/debugging/</loc>
+    <loc>https://gustats.com/tags/debugging/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/logging/</loc>
+    <loc>https://gustats.com/tags/logging/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/os/</loc>
+    <loc>https://gustats.com/tags/os/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/pathlib/</loc>
+    <loc>https://gustats.com/tags/pathlib/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/programming/file_manipulation/</loc>
+    <loc>https://gustats.com/posts/programming/file_manipulation/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/regex/</loc>
+    <loc>https://gustats.com/tags/regex/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://gustats.com/categories/</loc>
   </url>
 </urlset>

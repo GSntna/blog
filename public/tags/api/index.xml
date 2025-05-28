@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Gustavo Santana</title>
-    <link>https://example.org/tags/api/</link>
+    <link>https://gustats.com/tags/api/</link>
     <description>Recent content in Api on Gustavo Santana</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gustats.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API Basics</title>
-      <link>https://example.org/posts/programming/apis/</link>
+      <link>https://gustats.com/posts/programming/apis/</link>
       <pubDate>Mon, 12 May 2025 10:36:03 +0200</pubDate>
-      <guid>https://example.org/posts/programming/apis/</guid>
+      <guid>https://gustats.com/posts/programming/apis/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Application Programming Interfaces (APIs) act as a software intermediary,&#xA;allowing applications to exchange data and requests without needing to know&#xA;the internal workings of the other application&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Letter&lt;/th&gt;&#xA;          &lt;th&gt;Word&lt;/th&gt;&#xA;          &lt;th&gt;Meaning&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;A&lt;/td&gt;&#xA;          &lt;td&gt;Application&lt;/td&gt;&#xA;          &lt;td&gt;Software that does a task&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;P&lt;/td&gt;&#xA;          &lt;td&gt;Program&lt;/td&gt;&#xA;          &lt;td&gt;Program (P) that does the task in the Application (A)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;I&lt;/td&gt;&#xA;          &lt;td&gt;Interface&lt;/td&gt;&#xA;          &lt;td&gt;Place (I) to tell the program (P) to run&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Some of the advantages of using an API are:&lt;/p&gt;</description>
     </item>
   </channel>

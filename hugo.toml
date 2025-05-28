@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://gustats.com/'
 languageCode = 'en-us'
 # Automatically generate robots.txt
 enableRobotsTXT = true

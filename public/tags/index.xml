@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Gustavo Santana</title>
-    <link>https://example.org/tags/</link>
+    <link>https://gustats.com/tags/</link>
     <description>Recent content in Tags on Gustavo Santana</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gustats.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Books</title>
-      <link>https://example.org/tags/books/</link>
+      <link>https://gustats.com/tags/books/</link>
       <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
-      <guid>https://example.org/tags/books/</guid>
+      <guid>https://gustats.com/tags/books/</guid>
       <description></description>
     </item>
     <item>
       <title>Habits</title>
-      <link>https://example.org/tags/habits/</link>
+      <link>https://gustats.com/tags/habits/</link>
       <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
-      <guid>https://example.org/tags/habits/</guid>
+      <guid>https://gustats.com/tags/habits/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Development</title>
-      <link>https://example.org/tags/self-development/</link>
+      <link>https://gustats.com/tags/self-development/</link>
       <pubDate>Fri, 16 May 2025 14:52:20 +0200</pubDate>
-      <guid>https://example.org/tags/self-development/</guid>
+      <guid>https://gustats.com/tags/self-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Bs4</title>
-      <link>https://example.org/tags/bs4/</link>
+      <link>https://gustats.com/tags/bs4/</link>
       <pubDate>Mon, 12 May 2025 10:50:29 +0200</pubDate>
-      <guid>https://example.org/tags/bs4/</guid>
+      <guid>https://gustats.com/tags/bs4/</guid>
       <description></description>
     </item>
     <item>
       <title>Notes</title>
-      <link>https://example.org/tags/notes/</link>
+      <link>https://gustats.com/tags/notes/</link>
       <pubDate>Mon, 12 May 2025 10:50:29 +0200</pubDate>
-      <guid>https://example.org/tags/notes/</guid>
+      <guid>https://gustats.com/tags/notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://example.org/tags/python/</link>
+      <link>https://gustats.com/tags/python/</link>
       <pubDate>Mon, 12 May 2025 10:50:29 +0200</pubDate>
-      <guid>https://example.org/tags/python/</guid>
+      <guid>https://gustats.com/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Selenium</title>
-      <link>https://example.org/tags/selenium/</link>
+      <link>https://gustats.com/tags/selenium/</link>
       <pubDate>Mon, 12 May 2025 10:50:29 +0200</pubDate>
-      <guid>https://example.org/tags/selenium/</guid>
+      <guid>https://gustats.com/tags/selenium/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>https://example.org/tags/web/</link>
+      <link>https://gustats.com/tags/web/</link>
       <pubDate>Mon, 12 May 2025 10:50:29 +0200</pubDate>
-      <guid>https://example.org/tags/web/</guid>
+      <guid>https://gustats.com/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Api</title>
-      <link>https://example.org/tags/api/</link>
+      <link>https://gustats.com/tags/api/</link>
       <pubDate>Mon, 12 May 2025 10:36:03 +0200</pubDate>
-      <guid>https://example.org/tags/api/</guid>
+      <guid>https://gustats.com/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Http</title>
-      <link>https://example.org/tags/http/</link>
+      <link>https://gustats.com/tags/http/</link>
       <pubDate>Mon, 12 May 2025 10:36:03 +0200</pubDate>
-      <guid>https://example.org/tags/http/</guid>
+      <guid>https://gustats.com/tags/http/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugging</title>
-      <link>https://example.org/tags/debugging/</link>
+      <link>https://gustats.com/tags/debugging/</link>
       <pubDate>Sat, 10 May 2025 19:24:47 +0200</pubDate>
-      <guid>https://example.org/tags/debugging/</guid>
+      <guid>https://gustats.com/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>Logging</title>
-      <link>https://example.org/tags/logging/</link>
+      <link>https://gustats.com/tags/logging/</link>
       <pubDate>Sat, 10 May 2025 19:24:47 +0200</pubDate>
-      <guid>https://example.org/tags/logging/</guid>
+      <guid>https://gustats.com/tags/logging/</guid>
       <description></description>
     </item>
     <item>
       <title>Os</title>
-      <link>https://example.org/tags/os/</link>
+      <link>https://gustats.com/tags/os/</link>
       <pubDate>Sat, 10 May 2025 19:14:59 +0200</pubDate>
-      <guid>https://example.org/tags/os/</guid>
+      <guid>https://gustats.com/tags/os/</guid>
       <description></description>
     </item>
     <item>
       <title>Pathlib</title>
-      <link>https://example.org/tags/pathlib/</link>
+      <link>https://gustats.com/tags/pathlib/</link>
       <pubDate>Sat, 10 May 2025 19:14:59 +0200</pubDate>
-      <guid>https://example.org/tags/pathlib/</guid>
+      <guid>https://gustats.com/tags/pathlib/</guid>
       <description></description>
     </item>
     <item>
       <title>Regex</title>
-      <link>https://example.org/tags/regex/</link>
+      <link>https://gustats.com/tags/regex/</link>
       <pubDate>Sat, 10 May 2025 19:04:01 +0200</pubDate>
-      <guid>https://example.org/tags/regex/</guid>
+      <guid>https://gustats.com/tags/regex/</guid>
       <description></description>
     </item>
   </channel>
