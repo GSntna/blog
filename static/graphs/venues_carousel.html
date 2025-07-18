@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: sans-serif; }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      padding-bottom: 60%; /* 3:4 portrait-style aspect ratio */
+      position: relative;
+    }
+    .carousel-slide img {
+      position: absolute;
+      width: 100%;
+      height: 133.33%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+    .carousel-slide {
+      aspect-ratio: 6 / 5;
+      position: relative;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .carousel-dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .carousel-dot.active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel" id="carousel">
+  <div class="carousel-track" id="carousel-track">
+    <div class="carousel-slide"><img src="../images/masters_thesis/venues_table/carousel/public_transport.png" alt="Public transport in Guadalajara"></div>
+    <div class="carousel-slide"><img src="../images/masters_thesis/venues_table/carousel/super_markets.png" alt="Super markets in Guadalajara"></div>
+    <div class="carousel-slide"><img src="../images/masters_thesis/venues_table/carousel/convenience_stores.png" alt="Convenience stores in Guadalajara"></div>
+  </div>
+</div>
+
+<div class="carousel-nav" id="carousel-nav"></div>
+
+<script>
+  const track = document.getElementById('carousel-track');
+  const nav = document.getElementById('carousel-nav');
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 0;
+
+  function updateCarousel(index) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+    current = index;
+  }
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => updateCarousel(i));
+    nav.appendChild(dot);
+  });
+
+  // // Optional: autoplay
+  // setInterval(() => {
+  //   updateCarousel((current + 1) % slides.length);
+  // }, 4000);
+</script>
+
+</body>
+</html>
