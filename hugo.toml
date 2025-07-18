@@ -89,7 +89,7 @@ title = "Gustavo Santana"
     "business intelligence", "data analysis", "data"]
 
   # Posts in homepage display
-  showPostsOnHomePage = "popular"  # "popular" or "recent"
+  showPostsOnHomePage = "recent"  # "popular" or "recent"
   numberPostsOnHomePage = 4
 
   # Show next/previous buttons in the posts
@@ -120,7 +120,28 @@ title = "Gustavo Santana"
       gtag('config', 'G-Z17E0QP0VK');
     </script>
 
+    <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    
+    <!-- Katex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
   '''
 
 # To handle web crawlers and requests overload
