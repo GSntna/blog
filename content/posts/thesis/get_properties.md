@@ -201,9 +201,9 @@ were incorrectly classified to either of these locations and also eliminate
 properties a little out of bounds where we won't have venues information.
 
 7. Remove records where the coordinates are out of Guadalajara and Zapopan
-boundries.
+boundaries.
 
-![Zapopan and Guadalajara, Jalisco, Mexico neighborhood boundries](/images/masters_thesis/properties_table/map_boundries.png)
+![Zapopan and Guadalajara, Jalisco, Mexico neighborhood boundaries](/images/masters_thesis/properties_table/map_boundaries.png)
 
 ### Outliers
 
@@ -227,15 +227,15 @@ and Guadalajara's market the following thresholds were set:
 #### Interquertile Range (IQR)
 
 The IQR or box plot method is pretty straight forward. The IQR is calculated
-through the difference of the third and fist quartile ($IQR = Q3 - Q1$). Any
+through the difference of the third and first quartile ($IQR = Q3 - Q1$). Any
 object that is more than $1.5 \times IQR$ smaller than $Q1$ or $1.5 \times IQR$
-larger than $Q3$, is treated bas an outlier because the region between these
-boundries contains 99.3% of the objects.
+larger than $Q3$, is treated as an outlier because the region between these
+boundaries contains 99.3% of the objects.
 
 The graph below shows the boxplot of the variable
 **Price per construction squared meter**. The whiskers (in this case only the top
-one), shows the $1.5 \times IQR$ boundries from $Q1$ and $Q3$. The points
-outside of these boundries are the outliers.
+one), shows the $1.5 \times IQR$ boundaries from $Q1$ and $Q3$. The points
+outside of these boundaries are the outliers.
 
 ![Price per squared meter boxplot](/images/masters_thesis/properties_table/price_sqm_boxplot.png)
 
@@ -290,7 +290,7 @@ many records were removed for each step and how many records are remaining.
 | Over 10 half bathroom                     |              -1 |       3,735 |
 | Over 10 full bathroom                     |              -0 |       3,735 |
 | Properties "in construction"              |            -199 |       3,536 |
-| Out of nieghborhood boundries             |            -187 |       3,349 |
+| Out of nieghborhood boundaries             |            -187 |       3,349 |
 | 100k $\le$ price        $\ge$ 100M ($ MXN)|             -10 |       3,339 |
 | 10m² $\le$ construction $\ge$ 1,200m²     |             -33 |       3,306 |
 | 10m² $\le$ land         $\ge$ 1,500m²     |            -331 |       2,975 |
@@ -419,7 +419,7 @@ From the figure above, we can get the following insights:
 
 ##### Weak or negative correlations with price per m²
 
-| Feature Pair    |   Corr    |  Interpretation |
+| Feature    |   Corr    |  Interpretation |
 | -------------   | --------- | --------------- |
 | `construction` |  -0.18 |   Larger homes often lower per m² (economies of scale) |
 | `bedrooms` |  -0.41 |   More bedrooms = bigger home, but price doesn’t increase proportionally |
@@ -428,9 +428,9 @@ From the figure above, we can get the following insights:
 | `land` |  -0.01 |   Virtually no effect per m² (used for other purposes?) |
 | `gated_community` |   -0.18 |    Possibly location-specific; may not raise price per m² on average |
 
-Another interesting finding is that `pool` appears to have no significative
-correlation with any other variable, which may suggest that it isn't consistenly
-valued across areas.
+Another interesting finding is that `pool` appears to have no significant
+correlation with any other variable, which may suggest that it isn't
+consistently valued across areas.
 
 #### Prices in the top 10 most offered neighborhoods
 
@@ -461,6 +461,12 @@ the areas, we see that, indeed, the center of Zapopan is the most expenisve zone
 in the metropolitan area and that the outskirts tend to be lower in price.
 
 ![Price map by neighborhood](/images/masters_thesis/properties_table/price_by_neighborhood.png)
+
+#### Interactive map
+
+<iframe
+ width="100%" height="700px"
+src='/graphs/price_by_neighborhood_interactive.html'></iframe>
 
 ## References
 
