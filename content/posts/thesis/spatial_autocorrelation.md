@@ -243,8 +243,8 @@ low (LL) prices and, between them,
 
 ## Conclusion
 
-Guadalajara and Zapopan properties exhibit spatial autocorrelation in most of
-their variables: with HH clusters from West to East in the center of the
+Guadalajara and Zapopan properties exhibit spatial autocorrelation in their
+price per m²: with HH clusters from West to East in the center of the
 metropolitan area and LL clusters in the outskirts; along with some neighborhoods
 in between with either LL or HL clusters.
 
