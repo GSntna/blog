@@ -4,7 +4,7 @@ description: "How I collected geospatial data on schools, hospitals, transit and
 # image: ""
 lastmod: 2025-07-09
 showTableOfContents: true
-tags: ["thesis", "geospatial data", "api", "python"]
+tags: ["thesis", "geospatial", "api", "python"]
 title: "Mapping Urban Influences: How I Collected Venue Data to Analyze Property Prices in Guadalajara"
 type: "post"
 ---
