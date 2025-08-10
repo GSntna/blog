@@ -1,7 +1,7 @@
 ---
 date: 2025-08-08T17:32:37-06:00
 description: "This post defines Spatial Autocorrelation and applies it to the Guadalajara properties dataset"
-# image: ""
+image: "/images/masters_thesis/autocorrelation/moranplot_price_gdl.png"
 lastmod: 2025-08-08
 showTableOfContents: true
 tags: ["thesis", "geospatial"]
